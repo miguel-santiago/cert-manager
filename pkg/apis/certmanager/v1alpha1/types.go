@@ -254,8 +254,9 @@ type ACMECertificateDomainConfig struct {
 }
 
 type ACMECertificateHTTP01Config struct {
-	Ingress      string  `json:"ingress"`
-	IngressClass *string `json:"ingressClass,omitempty"`
+	Ingress      string            `json:"ingress"`
+	IngressClass *string           `json:"ingressClass,omitempty"`
+	Annotations  map[string]string `json:"annotations,omitempty"`
 }
 
 type ACMECertificateDNS01Config struct {
